@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360FDBE91C1F66B50050885A /* CSVManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 360FDBE81C1F66B50050885A /* CSVManager.m */; };
+		360FDBEC1C1F696F0050885A /* CautionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360FDBEB1C1F696F0050885A /* CautionViewController.m */; };
 		367211E91C1EFC53002C0089 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 367211E61C1EFC53002C0089 /* ListViewController.m */; };
 		367211EA1C1EFC53002C0089 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 367211E81C1EFC53002C0089 /* ViewController.m */; };
 		367211ED1C1EFC6A002C0089 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 367211EC1C1EFC6A002C0089 /* DetailViewController.m */; };
@@ -20,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		360FDBE71C1F66B50050885A /* CSVManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSVManager.h; sourceTree = "<group>"; };
+		360FDBE81C1F66B50050885A /* CSVManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSVManager.m; sourceTree = "<group>"; };
+		360FDBEA1C1F696F0050885A /* CautionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CautionViewController.h; path = ViewController/CautionViewController.h; sourceTree = "<group>"; };
+		360FDBEB1C1F696F0050885A /* CautionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CautionViewController.m; path = ViewController/CautionViewController.m; sourceTree = "<group>"; };
 		367211E51C1EFC53002C0089 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = ViewController/ListViewController.h; sourceTree = "<group>"; };
 		367211E61C1EFC53002C0089 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ViewController/ListViewController.m; sourceTree = "<group>"; };
 		367211E71C1EFC53002C0089 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ViewController/ViewController.h; sourceTree = "<group>"; };
@@ -59,6 +65,8 @@
 				367211E61C1EFC53002C0089 /* ListViewController.m */,
 				367211EB1C1EFC6A002C0089 /* DetailViewController.h */,
 				367211EC1C1EFC6A002C0089 /* DetailViewController.m */,
+				360FDBEA1C1F696F0050885A /* CautionViewController.h */,
+				360FDBEB1C1F696F0050885A /* CautionViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -76,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				367211F31C1EFE49002C0089 /* data.csv */,
+				360FDBE71C1F66B50050885A /* CSVManager.h */,
+				360FDBE81C1F66B50050885A /* CSVManager.m */,
 			);
 			name = CSV;
 			sourceTree = "<group>";
@@ -192,9 +202,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360FDBE91C1F66B50050885A /* CSVManager.m in Sources */,
 				367211ED1C1EFC6A002C0089 /* DetailViewController.m in Sources */,
 				36A5D4101C1EF9C3000CB9B8 /* AppDelegate.m in Sources */,
 				36A5D40D1C1EF9C3000CB9B8 /* main.m in Sources */,
+				360FDBEC1C1F696F0050885A /* CautionViewController.m in Sources */,
 				367211EA1C1EFC53002C0089 /* ViewController.m in Sources */,
 				367211E91C1EFC53002C0089 /* ListViewController.m in Sources */,
 				367211F11C1EFCDB002C0089 /* DataModel.m in Sources */,

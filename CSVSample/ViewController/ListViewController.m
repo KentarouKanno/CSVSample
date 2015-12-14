@@ -9,6 +9,7 @@
 #import "ListViewController.h"
 #import "DetailViewController.h"
 #import "DataModel.h"
+#import "CSVManager.h"
 
 @interface ListViewController ()<UITableViewDataSource,UITableViewDelegate> {
     NSMutableArray *sectionData;
@@ -22,8 +23,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     [[self navigationController] setNavigationBarHidden:NO animated:NO];
-    [self generateCSVDataFromBundle];
+    [[self navigationController] setNavigationBarHidden:NO animated:NO];
+    
+    CSVManager *manager = [CSVManager new];
+    NSArray *array = [manager generateCSVDataFromDocument];
+    sectionTitle = array[0];
+    sectionData  = array[1];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -31,46 +36,6 @@
     [_listTableView deselectRowAtIndexPath:selectIndex animated:YES];
 }
 
-- (void)generateCSVDataFromBundle {
-    
-    NSString *csvFile = [[NSBundle mainBundle]pathForResource:@"data" ofType:@"csv"];
-    NSData *csvData = [NSData dataWithContentsOfFile:csvFile];
-    NSString *csv = [[NSString alloc] initWithData:csvData encoding:NSShiftJISStringEncoding];
-    NSArray *lines = [csv componentsSeparatedByString:@"\n"];
-    
-    sectionData = [NSMutableArray array];
-    sectionTitle = [NSMutableArray array];
-    
-    NSMutableArray *listDataArray = [NSMutableArray array];
-    NSString *title;
-    
-    for (NSString *row in lines) {
-        
-        NSArray *items = [row componentsSeparatedByString:@","];
-        
-        DataModel *data = [DataModel new];
-        [data setDataFromArray:items];
-        
-        if (!title) {
-            title = data.sectionTitle;
-            [sectionTitle addObject:title];
-        }
-        
-        if ([title isEqualToString:data.sectionTitle]) {
-            [listDataArray addObject:data];
-        } else {
-            
-            title = data.sectionTitle;
-            [sectionTitle addObject:title];
-            
-            [sectionData addObject:listDataArray];
-            
-            listDataArray = [NSMutableArray array];
-            [listDataArray addObject:data];
-        }
-    }
-    [sectionData addObject:listDataArray];
-}
 
 #pragma mark- TableView Delegate & DataSource
 

@@ -7,11 +7,19 @@
 //
 
 #import "ViewController.h"
+#import "CSVManager.h"
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    CSVManager *manager = [CSVManager new];
+    [manager copyResourceBundleToDocument];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
 }
 

@@ -30,6 +30,7 @@
     
     NSMutableArray *sectionData = [NSMutableArray array];
     NSMutableArray *sectionTitle = [NSMutableArray array];
+    NSMutableArray *allDataArray = [NSMutableArray array];
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *directory = [paths objectAtIndex:0];
@@ -69,10 +70,12 @@
             listDataArray = [NSMutableArray array];
             [listDataArray addObject:data];
         }
+        
+        [allDataArray addObject:data];
     }
     [sectionData addObject:listDataArray];
     
-    return @[sectionTitle, sectionData];
+    return @[sectionTitle, sectionData, allDataArray];
 }
 
 @end

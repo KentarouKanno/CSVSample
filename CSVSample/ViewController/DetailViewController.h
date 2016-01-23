@@ -10,5 +10,8 @@
 #import "DataModel.h"
 
 @interface DetailViewController : UIViewController
+
 @property DataModel *data;
+@property NSMutableArray *allDataArray;
+
 @end

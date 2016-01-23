@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		360FDBE91C1F66B50050885A /* CSVManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 360FDBE81C1F66B50050885A /* CSVManager.m */; };
-		360FDBEC1C1F696F0050885A /* CautionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360FDBEB1C1F696F0050885A /* CautionViewController.m */; };
+		366814B71C534A5000E19844 /* DetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 366814B61C534A5000E19844 /* DetailCollectionViewCell.m */; };
 		367211E91C1EFC53002C0089 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 367211E61C1EFC53002C0089 /* ListViewController.m */; };
 		367211EA1C1EFC53002C0089 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 367211E81C1EFC53002C0089 /* ViewController.m */; };
 		367211ED1C1EFC6A002C0089 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 367211EC1C1EFC6A002C0089 /* DetailViewController.m */; };
@@ -24,8 +24,8 @@
 /* Begin PBXFileReference section */
 		360FDBE71C1F66B50050885A /* CSVManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSVManager.h; sourceTree = "<group>"; };
 		360FDBE81C1F66B50050885A /* CSVManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSVManager.m; sourceTree = "<group>"; };
-		360FDBEA1C1F696F0050885A /* CautionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CautionViewController.h; path = ViewController/CautionViewController.h; sourceTree = "<group>"; };
-		360FDBEB1C1F696F0050885A /* CautionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CautionViewController.m; path = ViewController/CautionViewController.m; sourceTree = "<group>"; };
+		366814B51C534A5000E19844 /* DetailCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailCollectionViewCell.h; path = Cell/DetailCollectionViewCell.h; sourceTree = "<group>"; };
+		366814B61C534A5000E19844 /* DetailCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailCollectionViewCell.m; path = Cell/DetailCollectionViewCell.m; sourceTree = "<group>"; };
 		367211E51C1EFC53002C0089 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = ViewController/ListViewController.h; sourceTree = "<group>"; };
 		367211E61C1EFC53002C0089 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ViewController/ListViewController.m; sourceTree = "<group>"; };
 		367211E71C1EFC53002C0089 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ViewController/ViewController.h; sourceTree = "<group>"; };
@@ -56,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		366814B41C534A1900E19844 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				366814B51C534A5000E19844 /* DetailCollectionViewCell.h */,
+				366814B61C534A5000E19844 /* DetailCollectionViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		367211E41C1EFC39002C0089 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,8 +74,6 @@
 				367211E61C1EFC53002C0089 /* ListViewController.m */,
 				367211EB1C1EFC6A002C0089 /* DetailViewController.h */,
 				367211EC1C1EFC6A002C0089 /* DetailViewController.m */,
-				360FDBEA1C1F696F0050885A /* CautionViewController.h */,
-				360FDBEB1C1F696F0050885A /* CautionViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 				36A5D40F1C1EF9C3000CB9B8 /* AppDelegate.m */,
 				367211F21C1EFE36002C0089 /* CSV */,
 				367211E41C1EFC39002C0089 /* ViewController */,
+				366814B41C534A1900E19844 /* Cell */,
 				367211EE1C1EFC8B002C0089 /* Model */,
 				36A5D4141C1EF9C3000CB9B8 /* Main.storyboard */,
 				36A5D4171C1EF9C3000CB9B8 /* Assets.xcassets */,
@@ -206,10 +214,10 @@
 				367211ED1C1EFC6A002C0089 /* DetailViewController.m in Sources */,
 				36A5D4101C1EF9C3000CB9B8 /* AppDelegate.m in Sources */,
 				36A5D40D1C1EF9C3000CB9B8 /* main.m in Sources */,
-				360FDBEC1C1F696F0050885A /* CautionViewController.m in Sources */,
 				367211EA1C1EFC53002C0089 /* ViewController.m in Sources */,
 				367211E91C1EFC53002C0089 /* ListViewController.m in Sources */,
 				367211F11C1EFCDB002C0089 /* DataModel.m in Sources */,
+				366814B71C534A5000E19844 /* DetailCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -308,7 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -319,6 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CSVSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -331,6 +340,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CSVSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
